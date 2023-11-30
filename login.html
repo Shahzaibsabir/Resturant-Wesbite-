@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            /* background-color: black; */
+        }
+
+        .login-Card {
+
+            border: 2px solid black;
+            height: 80vh;
+            width: 50vw;
+            display: flex;
+            color: white;
+            border-radius: 50px;
+            object-fit: cover;
+            overflow: hidden;
+            transition: all ese 1s;
+        }
+
+        .card-img {
+
+            background-color: rgb(158, 158, 214);
+            height: 100%;
+            width: 50%;
+            /* object-fit: cover;
+    overflow: hidden; */
+
+        }
+
+        .card-img img {
+
+            height: 100%;
+            /* width: 100%; */
+            object-fit: cover;
+            overflow: hidden;
+            /* display flex;
+    flex-direction: column;: */
+            /* position: relative; */
+            /* display: flex; */
+
+
+
+
+        }
+
+        .content {
+
+            display: flex;
+            height: 100%;
+            width: 50%;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(50, 49, 56);
+            padding: 20px 0px;
+            text-align: center;
+            /* z-index: -1; */
+        }
+
+        input {
+            height: 6vh;
+            width: 20vw;
+            padding: 0 20px;
+            border-radius: 30px;
+            border: none;
+            font-size: 20px;
+            /* margin: 5px 0px; */
+            position: relative;
+
+
+        }
+
+        .content p {
+            font-size: 20px;
+            margin: 0px 20px;
+        }
+
+        .content h1 {
+
+            font-size: 60px;
+            margin: 0px;
+
+        }
+
+        .content a {
+            text-align: left;
+            color: white;
+            font-size: 20px;
+            margin-right: 150px;
+
+        }
+
+        .btn {
+            height: 7vh;
+            width: 13vw;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(115, 255, 0);
+            border: 2px solid rgb(19, 19, 10);
+            cursor: pointer;
+            box-shadow: 0px 0px 10px white;
+            border-radius: 70px;
+            padding: 0px 20px;
+            margin-bottom: 50px;
+        }
+
+        .reverse-back {
+            display: flex;
+            flex-direction: row-reverse;
+            background-color: rgb(21, 255, 0);
+            z-index: -1;
+        }
+        .reverse-front {
+          
+            background-color: rgb(21, 255, 0);
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="logincard" class="login-Card">
+        <div class="card-img">
+            <!-- <img  src="https://source.unsplash.com/WLUHO9A_xik/1600x900" alt=""> -->
+            <div>
+
+                <button onclick=" reversehandle()" class="btn"
+                style="position: absolute;   margin: 300px 80px ;  opacity: 0.6; background-color: rgb(231, 231, 231);">
+                Sign Up</button>
+            </div>
+            <img src="./assets/download (3).jpeg" alt="">
+
+
+
+        </div>
+
+
+        <div class="content">
+            <h1>Login</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sequi.</p>
+
+            <input type="text" placeholder="enter user name">
+            <input type="password" placeholder="enter user Password">
+
+            <a href="">Forgotten Password</a>
+
+            <button class="btn">Login</button>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div id="signUpcard" class="login-Card" style="position: absolut;">
+        <div class="card-img">
+            <div>
+
+                <button onclick=" reversehandle()" class="btn"
+                    style="position: absolute;   margin: 300px 80px ;  opacity: 0.6; background-color: rgb(231, 231, 231);">
+                    Login</button>
+            </div>
+            <!-- <img src="https://source.unsplash.com/WLUHO9A_xik/1600x900" alt=""> -->
+            <img src="./assets/download (3).jpeg" alt="">
+            <!-- <button class="btn" style="position: absolute; z-index: 1;" >Create Account</button> -->
+
+        </div>
+
+
+        <div class="content">
+            <h1>Sign up</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sequi.</p>
+
+            <input type="text" placeholder="enter user name">
+            <input type="email" placeholder="enter email">
+            <input type="password" placeholder="enter user Password">
+            <input type="password" placeholder="enter user Consirm Password">
+
+            <!-- <a href="">Forgotten Password</a> -->
+
+            <button class="btn" id="SignupBtn">Create account</button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        const loginBtn = document.querySelector("#loginbtn");
+        const signupBtn = document.querySelector("#signUpbtn");
+        const loginSec = document.querySelector("#loginCard")
+        const signUpSec = document.querySelector("#signUpcard")
+
+        function reversehandle() {
+
+           const a = signUpSec.classList;
+            a.add("reverse-back")
+
+            a.remove("reverse-back");
+            
+
+      
+
+            // signUpSec.innerHTML.classList.add("reverse-right")
+
+        }
+
+    </script>
+</body>
+
+</html>
