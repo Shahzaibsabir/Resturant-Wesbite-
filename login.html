@@ -124,11 +124,17 @@
             flex-direction: row-reverse;
             background-color: rgb(21, 255, 0);
             z-index: -1;
+            transition: all ease 2s;
+
+
         }
+
         .reverse-front {
-          
+
             background-color: rgb(21, 255, 0);
-            z-index: 1;
+            z-index: -1;
+
+
         }
     </style>
 </head>
@@ -137,31 +143,35 @@
 
 
     <div id="logincard" class="login-Card">
-        <div class="card-img">
-            <!-- <img  src="https://source.unsplash.com/WLUHO9A_xik/1600x900" alt=""> -->
-            <div>
 
-                <button onclick=" reversehandle()" class="btn"
-                style="position: absolute;   margin: 300px 80px ;  opacity: 0.6; background-color: rgb(231, 231, 231);">
-                Sign Up</button>
-            </div>
-            <img src="./assets/download (3).jpeg" alt="">
-
-
-
-        </div>
 
 
         <div class="content">
             <h1>Login</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sequi.</p>
 
-            <input type="text" placeholder="enter user name">
-            <input type="password" placeholder="enter user Password">
+            <input id="ligUser" type="text" placeholder="enter user name">
+            <input id="loginPswd" type="password" placeholder="enter user Password">
 
             <a href="">Forgotten Password</a>
 
             <button class="btn">Login</button>
+
+        </div>
+
+
+
+        <div class="card-img">
+            <!-- <img  src="https://source.unsplash.com/WLUHO9A_xik/1600x900" alt=""> -->
+            <div>
+
+                <button onclick="reversehandle2()" class="btn"
+                    style="position: absolute;   margin: 300px 80px ;  opacity: 0.6; background-color: rgb(231, 231, 231);">
+                    Sign Up</button>
+            </div>
+            <img src="./assets/download (3).jpeg" alt="">
+
+
 
         </div>
 
@@ -189,14 +199,14 @@
             <h1>Sign up</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sequi.</p>
 
-            <input type="text" placeholder="enter user name">
-            <input type="email" placeholder="enter email">
-            <input type="password" placeholder="enter user Password">
-            <input type="password" placeholder="enter user Consirm Password">
+            <input id="signUserName" type="text" placeholder="enter user name">
+            <input id="signEmail" type="email" placeholder="enter email">
+            <input id="signPswd" type="password" placeholder="enter user Password">
+            <input id="signCPswd" type="password" placeholder="enter user Consirm Password">
 
             <!-- <a href="">Forgotten Password</a> -->
 
-            <button class="btn" id="SignupBtn">Create account</button>
+            <button onclick="signUpHandler() " class="btn" id="SignupBtn">Create account</button>
 
         </div>
 
@@ -211,17 +221,100 @@
 
         function reversehandle() {
 
-           const a = signUpSec.classList;
+            const a = signUpSec.classList;
             a.add("reverse-back")
 
-            a.remove("reverse-back");
-            
+            const b = signUpSec.classList;
+            b.add("reverse-front")
 
-      
+
 
             // signUpSec.innerHTML.classList.add("reverse-right")
 
         }
+        function reversehandle2() {
+
+            const a = signUpSec.classList;
+            a.remove("reverse-back")
+
+            const b = signUpSec.classList;
+            b.remove("reverse-front")
+            console.log("hellooo")
+
+
+
+            // signUpSec.innerHTML.classList.add("reverse-right")
+
+        }
+
+
+        // Signup Data Base
+
+        const signusername = document.querySelector("#signUserName")
+        const signEmail = document.querySelector("#signEmail")
+        const signPswd = document.querySelector("#signPswd")
+        const signCPswd = document.querySelector("#signCPswd")
+
+        const signUpHandler = () => {
+
+            const userData = JSON.parse(localStorage.getItem("userData")) || []
+
+            console.log(userData)
+
+            // checkin Filed
+
+            if (!signUserName.value || !signUserName.value || !signUserName.value || !signPswd.value || !signCPswd.value) return alert("Required Filefd is not Filled !!")
+
+            // checking length
+
+            if (signPswd.value.length < 8) return alert("Password Length Should be 8 Cheracters")
+
+            // Check Password & CPassword as Same
+            if (signPswd.value != signCPswd.value) return alert("Password Not Match")
+
+            // CheckUser found ||  Diplicate registratiom
+
+            const userNameFound = userData.find((userCheck) => {
+
+                if (userCheck.signusername === signUserName.value) return userCheck
+
+            })
+
+            if (userNameFound) return alert("User Already Registered")
+
+            const userEmailFound = userData.find((UserEmail) => {
+
+                if (userEmail.signEmail === signEmail.value) return userEmail
+
+            })
+            if (userEmailFound) return alert("User Email Already Exist")
+
+
+
+            const user = {
+
+        signusername: signUserName.value,
+         signEmail: signEmail.value,
+         signPswd : signPswd.value,
+         signCPswd : signCPswd.value,
+
+            }
+
+            userData.push(user)
+
+            localStorage.setItem("UserData", JSON.stringify(userData))
+
+            alert("SignUp Successfully")
+
+            setTimeout(() => {
+
+                window.location.href = "../login.html"
+            } , )
+
+
+        }
+
+
 
     </script>
 </body>
