@@ -1,0 +1,129 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    /* background-color: black; */
+}
+
+.login-Card {
+
+    border: 2px solid black;
+    height: 80vh;
+    width: 50vw;
+    display: flex;
+    color: white;
+    border-radius: 50px;
+    object-fit: cover;
+    overflow: hidden;
+    transition: all ese 1s;
+}
+
+.card-img {
+
+    background-color: rgb(158, 158, 214);
+    height: 100%;
+    width: 50%;
+    /* object-fit: cover;
+overflow: hidden; */
+
+}
+
+.card-img img {
+
+    height: 100%;
+    /* width: 100%; */
+    object-fit: cover;
+    overflow: hidden;
+    /* display flex;
+flex-direction: column;: */
+    /* position: relative; */
+    /* display: flex; */
+
+
+
+
+}
+
+.content {
+
+    display: flex;
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(50, 49, 56);
+    padding: 20px 0px;
+    text-align: center;
+    /* z-index: -1; */
+}
+
+input {
+    height: 6vh;
+    width: 20vw;
+    padding: 0 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    /* margin: 5px 0px; */
+    position: relative;
+
+
+}
+
+.content p {
+    font-size: 20px;
+    margin: 0px 20px;
+}
+
+.content h1 {
+
+    font-size: 60px;
+    margin: 0px;
+
+}
+
+.content a {
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    margin-right: 150px;
+
+}
+
+.btn {
+    height: 7vh;
+    width: 13vw;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgb(115, 255, 0);
+    border: 2px solid rgb(19, 19, 10);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px white;
+    border-radius: 70px;
+    padding: 0px 20px;
+    margin-bottom: 50px;
+}
+
+.reverse-back {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(21, 255, 0);
+    z-index: -1;
+    transition: all ease 2s;
+
+
+}
+
+.reverse-front {
+
+    background-color: rgb(21, 255, 0);
+    z-index: -1;
+
+
+}
