@@ -145,7 +145,7 @@ a:hover{
     width: 95vw;
     /* position: relative; */
 margin-top: 600px;
-color: rgb(189, 17, 17);
+color: white;
 z-index: 1;
 
 }
@@ -176,14 +176,9 @@ z-index: 1;
 /* Hover card Code */
 
 .container{
-    margin-top: 200px;
-    border-radius: 60%;
-    -webkit-border-radius: 60%;
-    -moz-border-radius: 60%;
-    -ms-border-radius: 60%;
-    -o-border-radius: 60%;
+    width: 325px;
 }
-.card .icon {
+.container .card .icon {
 
     position: absolute;
 
@@ -199,7 +194,7 @@ z-index: 1;
 
 }
 
- .card .icon .fa {
+.container .card .icon .fa {
 
     position: absolute;
 
@@ -215,7 +210,7 @@ z-index: 1;
 
 }
 
-.card .slide {
+.container .card .slide {
 
     width: 300px;
 
@@ -225,7 +220,7 @@ z-index: 1;
 
 }
 
- .card .slide.slide1 {
+.container .card .slide.slide1 {
 
     position: relative;
 
@@ -243,13 +238,13 @@ z-index: 1;
 
 }
 
-.card:hover .slide.slide1{
+.container .card:hover .slide.slide1{
 
     transform: translateY(0px);
 
 }
 
- .card .slide.slide2 {
+.container .card .slide.slide2 {
 
     position: relative;
 
@@ -271,13 +266,13 @@ z-index: 1;
 
 }
 
- .card:hover .slide.slide2{
+.container .card:hover .slide.slide2{
 
     transform: translateY(0);
 
 }
 
- .card .slide.slide2::after{
+.container .card .slide.slide2::after{
 
     content: "";
 
@@ -299,7 +294,7 @@ z-index: 1;
 
 }
 
- .card .slide.slide2 .content p {
+.container .card .slide.slide2 .content p {
 
     margin: 0;
 
@@ -311,7 +306,7 @@ z-index: 1;
 
 }
 
- .card .slide.slide2 .content h3 {
+.container .card .slide.slide2 .content h3 {
 
     margin: 0 0 10px 0;
 
