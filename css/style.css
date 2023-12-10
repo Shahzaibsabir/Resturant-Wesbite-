@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
 }
 
 
@@ -188,6 +189,8 @@ z-index: 1;
 /* Hover card Code */
 
 .container{
+
+    margin-top: 210px;
     width: 325px;
 }
 .container .card .icon {
@@ -210,7 +213,7 @@ z-index: 1;
 
 card-content {
     
-color: red;
+color: rgb(114, 0, 0);
 }
 
 .container .card .icon .fa {
@@ -225,7 +228,7 @@ color: red;
 
     font-size: 80px;
 
-    color: #fff;
+    color: #1b18e2;
 
 }
 
@@ -281,8 +284,9 @@ color: red;
     transition: .8s;
 
     transform: translateY(-100px);
-    background-color: white;
+    background-color: rgb(71, 68, 68);
     border-radius: 10px;
+    color: white;
 
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 
@@ -342,7 +346,7 @@ color: red;
 
     text-align: center;
 
-    color: #414141;
+    color: #e90d0d;
     
 
 } 
