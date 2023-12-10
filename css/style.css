@@ -9,6 +9,7 @@
 a{
     list-style-type: none;
     text-decoration: none;
+    /* padding: 5px; */
     color: white;
 }
 
@@ -89,7 +90,7 @@ header nav{
 }
 
 .nav-list, li{
-    margin-left: 30px;
+    margin-left: 25px;
     text-align: center;
 }
 
@@ -149,27 +150,38 @@ color: white;
 z-index: 1;
 
 }
+.mainSecImg{
+
+    /* border: 5pxs solid red; 
+    background-color: red; */
+    width: 90%;
+    margin-left: 50px;
+    /* object-fit: cover;
+    overflow: hidden; */
+
+}
 
 .main-Img{
 
-    width: 80%; 
+    width: 90%;
     display: flex; 
     justify-content: space-between;
-     margin: 315px 60px;
+     margin: 290px 10px;
+    
 }
 .main-Img img{
     transform: scale(1.2s);
     /*filter: drop-shadow(10px 10px 30px  rgba(0, 0, 0, 0.733));
     */filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4)) ;
-    height: 270px;
+    height: 200px;
     background-image: none;
     transition: transform .2s;
      /* Animation */:;
-    -webkit-filter:;
+    /* -webkit-filter:; */
 }
 
 .main-Img img:hover{
-    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     
 }
 
@@ -181,6 +193,7 @@ z-index: 1;
 .container .card .icon {
 
     position: absolute;
+    border-radius: 10px;
 
     top: 0;
 
@@ -190,8 +203,14 @@ z-index: 1;
 
     height: 100%;
 
-    background: #2c73df;
+    /* background: white */
+    
 
+}
+
+card-content {
+    
+color: red;
 }
 
 .container .card .icon .fa {
@@ -241,6 +260,7 @@ z-index: 1;
 .container .card:hover .slide.slide1{
 
     transform: translateY(0px);
+    /* background-color: white; */
 
 }
 
@@ -261,6 +281,8 @@ z-index: 1;
     transition: .8s;
 
     transform: translateY(-100px);
+    background-color: white;
+    border-radius: 10px;
 
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 
@@ -272,7 +294,7 @@ z-index: 1;
 
 }
 
-.container .card .slide.slide2::after{
+/* .container .card .slide.slide2::after{ */
 
     content: "";
 
@@ -302,9 +324,13 @@ z-index: 1;
 
     text-align: center;
 
-    color: #414141;
+    color: #d80f0f;
+    
 
 }
+
+
+
 
 .container .card .slide.slide2 .content h3 {
 
@@ -317,5 +343,6 @@ z-index: 1;
     text-align: center;
 
     color: #414141;
+    
 
 } 
